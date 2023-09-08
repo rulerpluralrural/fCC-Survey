@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles.css" />
+		<title>Survey Form</title>
+	</head>
+	<body>
+		<div id="modal-info" class="modal-info">
+			<div class="modal-info-content">
+				<div class="modal-info-header">
+					<h1>Tell us what movies and TV shows you love to watch!</h1>
+				</div>
+				<div class="form-container">
+					<form action="">
+						<div class="form-control">
+							<label for="first-name">First name</label>
+							<input type="text" name="first-name" id="first-name" required/>
+						</div>
+                        <div class="show-error"></div>
+						<div class="form-control">
+							<label for="last-name">Last name</label>
+							<input type="text" name="last-name" id="last-name" required/>
+						</div>
+                        <div class="show-error"></div>
+						<div class="form-control">
+							<label for="email">Email Address</label>
+							<input type="email" name="email" id="email" required/>
+						</div>
+                        <div class="show-error"></div>
+						<div class="form-control">
+							<label for="Age">Age <em>(optional)</em></label>
+							<input type="number" name="age" id="age" min="15" max="120"/>
+						</div>
+                        <button type="submit">Submit</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <title>Survey</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css">
+  <body>
+    <p class="header" id="description">Tell us what movies and TV shows you watch!</p>
+    <h1 id="title">Survey Form</h1>
+    <div class="container">
+      <form id="survey-form">
+      <label id="name-label" class="label-one"> Name</label>
+      <input id="name" class="form-a" type="text" placeholder="Enter your name" required></input>  
+      <label id="email-label" class="label-one"> Email</label>   
+      <input id="email" class="form-a" type="email" placeholder="Enter your Email" required></input>
+      <label id="number-label" class="label-one"> Age</label>
+      <input id="number" class="form-a" type="number" min="12" max="120" placeholder="12" required></input>
+      <p>Where did you hear about us?</p>
+<select id="dropdown" class="form-ddown">
+  <option> Social Media (Facebook,Twitter,Instagram, etc.)</option>
+  <option>Youtube, Twitch, other sites</option>
+  <option>Friends, Colleagues, Family</option>
+  <option>Ads</option>
+  <option>Others</option>
+</select>
+<p>Would you like recieve movie updates from us?</p>
+<label>
+<input class="radio-a" type="radio" name="update" value="html"> Yes</input>
+</label>
+<label>
+<input class="radio-a" type="radio" name="update" value="html"> No</input>
+</label>
+<label>
+<input class="radio-a" type="radio" name="update" value="html" > I'll think about it.</input>
+</label>
+<p> What kind of movies and TV shows do you usually watch?</p>
+<label>
+<input class="checkbox-a" type="checkbox" name="genre" value="html">Action</input>
+</label>
+<label>
+<input class="checkbox-a" type="checkbox" name="genre" value="html">Horror</input>
+</label>
+<label>
+<input class="checkbox-a" type="checkbox" name="genre" value="html">Comedy</input>
+</label>
+<label>
+<input class="checkbox-a" type="checkbox" name="genre" value="html">Romance</input>
+</label>
+<label>
+<input class="checkbox-a" type="checkbox" name="genre" value="html">Drama</input>
+</label>
+<label>
+<input class="checkbox-a" type="checkbox" name="genre" value="html">Animation</input>
+</label>
+<label>
+<input class="checkbox-a" type="checkbox" name="genre" value="html">Suspense/Thriller</input>
+</label>
+<label>
+<input class="checkbox-a" type="checkbox" name="genre" value="html">Others</input>
+</label>
+<label>
+<input class="text-a" type="text" value="" placeholder="Please Specify"> </input>
+</label>
+<p class="long-text">Feel free to leave suggestions and comments to help us improve thank you!</p>
+<textarea  placeholder=" Comment Here"></textarea>
+<input class="submit-text" id="submit" type="submit" value="Submit"></input>
+      </form>
+      </div>
+      </body>
+  </html> -->
