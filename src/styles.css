@@ -1,0 +1,327 @@
+/* assistant-regular - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: "Assistant 400";
+	font-style: normal;
+	font-weight: 400;
+	src: url("../src/Assets/fonts/assistant-v18-latin-regular.woff2")
+		format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* assistant-700 - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: "Assistant 700";
+	font-style: normal;
+	font-weight: 700;
+	src: url("../src/Assets/fonts/assistant-v18-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* quicksand-regular - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: "Quicksand 400";
+	font-style: normal;
+	font-weight: 400;
+	src: url("../src/Assets/fonts/quicksand-v30-latin-regular.woff2")
+		format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* quicksand-700 - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: "Quicksand 700";
+	font-style: normal;
+	font-weight: 700;
+	src: url("../src/Assets/fonts/quicksand-v30-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--light-blue-opq: rgba(217, 217, 252, 0.8);
+	--light-blue: #7f7fdb;
+	--navy-blue: #130e3d;
+	--purple-clr: #42215f;
+	--light-gray: #adadad;
+	--dark-gray: #646363;
+	--dark-clr: #141420;
+	--dark-opq: rgba(16, 16, 53, 0.4);
+	--light-clr: #fefefe;
+	--green-clr: #2fbe03cb;
+	--red-clr: #ff1a1af5;
+}
+
+body {
+	height: 100vh;
+	background-color: var(--light-clr);
+}
+
+h1,
+h2 {
+	font-family: "Assistant 700";
+}
+
+p {
+	font-family: "Quicksand 400";
+}
+
+em {
+	font-size: 1rem;
+}
+
+i {
+	font-size: 1.4em;
+}
+
+button {
+	font-family: "Assistant 700";
+	font-weight: 600;
+	font-size: 1.7rem;
+	cursor: pointer;
+}
+
+.disable {
+	opacity: 0;
+	pointer-events: none;
+}
+
+/*************************/
+/** Info Modal Styling **/
+/************************/
+
+.modal-info {
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--dark-opq);
+	transition: opacity 300ms ease-in;
+}
+
+.modal-info-content {
+	background-color: var(--light-clr);
+	color: var(--dark-clr);
+	text-align: center;
+	width: 620px;
+	overflow: hidden;
+}
+
+.modal-info-header {
+	padding: 20px;
+	background-color: var(--purple-clr);
+	color: var(--light-clr);
+}
+
+.modal-info-header h1 {
+	font-size: 2.1rem;
+	font-weight: 600;
+}
+
+.form-container {
+	padding: 30px;
+	padding-bottom: 40px;
+	font-family: "Quicksand 400";
+	font-size: 1.3rem;
+}
+
+.form-container form {
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+}
+
+.form-control {
+	width: 100%;
+	position: relative;
+}
+
+.form-control label {
+	display: inline-block;
+	padding: 10px;
+}
+
+.form-control input {
+	display: block;
+	font-size: 1.2rem;
+	font-family: "Quicksand 400";
+	border: 1px solid var(--light-gray);
+	color: var(--dark-clr);
+	width: 100%;
+	height: 35px;
+	padding: 1.3rem;
+	border-radius: 5px;
+}
+
+.form-control i {
+	position: absolute;
+	top: 55px;
+	border-radius: 50%;
+	right: 10px;
+	transition: opacity 300ms ease-in;
+}
+
+.form-control :nth-child(3) {
+	color: var(--green-clr);
+}
+
+.form-control :nth-child(4) {
+	color: var(--red-clr);
+}
+
+.form-control.success input {
+	border: 2px solid var(--green-clr);
+}
+
+.form-control.error input {
+	border: 2px solid var(--red-clr);
+}
+
+.show-error-text {
+	display: block;
+	padding: 2px;
+	text-align: left;
+	color: var(--red-clr);
+}
+
+.survey-btn {
+	background-color: var(--purple-clr);
+	color: var(--light-clr);
+	margin-top: 1.5rem;
+	border: none;
+	width: 100%;
+	padding: 5px;
+}
+
+.survey-btn:hover,
+.survey-btn:focus {
+	background-color: #522975;
+}
+
+/***************************/
+/** Survey Modal Styling **/
+/**************************/
+
+.survey-one-modal {
+	position: fixed;
+	z-index: 0;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--dark-opq);
+	transition: opacity 300ms ease-in;
+}
+
+.survey-one-container {
+	background-color: var(--light-clr);
+	color: var(--dark-clr);
+	text-align: center;
+	width: 620px;
+	padding-bottom: 25px;
+	overflow: hidden;
+}
+
+.survey-header {
+	height: 100px;
+	background-color: var(--purple-clr);
+	color: var(--light-clr);
+}
+
+.survey-one-container h1 {
+	font-size: 1.6rem;
+	margin-block: 10px;
+}
+
+.survey-form-control {
+	padding-block: 5px;
+	padding-inline: 20px;
+	display:  flex;
+	justify-content: space-between;
+}
+
+.survey-form-control p {
+	font-size: 1.3rem;
+}
+
+.survey-one-container button {
+	width: 50%;
+}
+
+/* The switch - the box around the slider */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+/* The slider */
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: var(--light-gray);
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: var(--light-clr);
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+input:checked + .slider {
+	background-color: var(--purple-clr);
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px var(--purple-clr);
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
