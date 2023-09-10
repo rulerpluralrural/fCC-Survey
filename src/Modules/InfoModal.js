@@ -1,3 +1,5 @@
+import { loadSurveyOne } from "./SurveyOneModal.js";
+
 const loadModalInfo = () => {
 	const modalInfoForm = document.querySelector("#modal-info-form");
 	const modalInfo = document.querySelector("#modal-info");
@@ -7,7 +9,6 @@ const loadModalInfo = () => {
 	modalInfoForm.addEventListener("submit", (e) => {
 		e.preventDefault();
 		checkInputs();
-        console.log('Success!')
 	});
 };
 
@@ -73,6 +74,7 @@ const checkInputs = () => {
 		lastName.parentElement.classList.contains("success")
 	) {
         modalInfo.classList.add('disable')
+		loadSurveyOne()
 	}
 };
 

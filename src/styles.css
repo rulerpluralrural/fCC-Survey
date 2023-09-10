@@ -72,6 +72,11 @@ p {
 	font-family: "Quicksand 400";
 }
 
+small {
+	font-size: 1.2rem;
+	font-family: "Quicksand 400";
+}
+
 em {
 	font-size: 1rem;
 }
@@ -215,7 +220,7 @@ button {
 
 .survey-one-modal {
 	position: fixed;
-	z-index: 0;
+	z-index: 1;
 	left: 0;
 	top: 0;
 	width: 100vw;
@@ -231,7 +236,7 @@ button {
 	background-color: var(--light-clr);
 	color: var(--dark-clr);
 	text-align: center;
-	width: 620px;
+	width: 650px;
 	padding-bottom: 25px;
 	overflow: hidden;
 }
@@ -247,9 +252,13 @@ button {
 	margin-block: 10px;
 }
 
+.survey-one-container small {
+	padding-left: 40px;
+}
+
 .survey-form-control {
 	padding-block: 5px;
-	padding-inline: 20px;
+	padding-inline: 35px;
 	display:  flex;
 	justify-content: space-between;
 }
