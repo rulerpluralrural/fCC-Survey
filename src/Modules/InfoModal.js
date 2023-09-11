@@ -32,6 +32,11 @@ const checkInputs = () => {
 			firstName.parentElement,
 			"*First name should'nt contain special characters"
 		);
+	} else if (checkForDigits(firstNameValue)) {
+		showError(
+			firstName.parentElement,
+			"*First name should'nt contain numbers"
+		);
 	} else if (firstName.value.length < 3) {
 		showError(
 			firstName.parentElement,
@@ -46,7 +51,12 @@ const checkInputs = () => {
 	} else if (checkForSpecialChars(lastNameValue)) {
 		showError(
 			lastName.parentElement,
-			"*Last name should'nt contain special characters"
+			"*Last name should'nt contain numbers"
+		);
+	} else if (checkForDigits(lastNameValue)) {
+		showError(
+			lastName.parentElement,
+			"*Please provide a valid last name"
 		);
 	} else if (lastName.value.length < 3) {
 		showError(
@@ -73,8 +83,8 @@ const checkInputs = () => {
 		firstName.parentElement.classList.contains("success") &&
 		lastName.parentElement.classList.contains("success")
 	) {
-        modalInfo.classList.add('disable')
-		loadSurveyOne()
+		modalInfo.classList.add("disable");
+		loadSurveyOne();
 	}
 };
 
@@ -87,6 +97,7 @@ const showError = (input, message) => {
 	successIcon.classList.add("disable");
 	errorIcon.classList.remove("disable");
 	errorText.textContent = message;
+	errorText.setAttribute("aria-hidden", "false");
 };
 
 const showSuccess = (input) => {
@@ -95,6 +106,7 @@ const showSuccess = (input) => {
 	const errorIcon = input.querySelector(".fa-circle-xmark");
 
 	successText.textContent = "";
+	successText.setAttribute("aria-hidden", "true");
 	errorIcon.classList.add("disable");
 	successIcon.classList.remove("disable");
 	input.className = "form-control success";
@@ -106,6 +118,10 @@ const isValidEmail = (email) => {
 
 const checkForSpecialChars = (name) => {
 	return /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/.test(name);
+};
+
+const checkForDigits = (name) => {
+	return /\d/.test(name);
 };
 
 export { loadModalInfo };

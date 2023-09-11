@@ -17,21 +17,21 @@ export default function createInfoModal() {
 							<input type="text" name="first-name" id="first-name" placeholder="John" required/>
 							<i class="fa-regular fa-circle-check disable"></i>
 							<i class="fa-regular fa-circle-xmark disable"></i>
-							<small class="show-error-text"></small>
+							<small role="alert" class="show-error-text" aria-hidden="true"></small>
 						</div>
 						<div class="form-control">
 							<label for="last-name">Last name</label>
 							<input type="text" name="last-name" id="last-name" placeholder="Smith" required/>
 							<i class="fa-regular fa-circle-check disable"></i>
 							<i class="fa-regular fa-circle-xmark disable"></i>
-							<small class="show-error-text"></small>
+							<small role="alert" class="show-error-text" aria-hidden="true"></small>
 						</div>
 						<div class="form-control">
 							<label for="email">Email Address</label>
 							<input type="email" name="email" id="email" placeholder="johnsmith1@email.com" required/>
 							<i class="fa-regular fa-circle-check disable"></i>
 							<i class="fa-regular fa-circle-xmark disable"></i>
-							<small class="show-error-text"></small>
+							<small role="alert" class="show-error-text" aria-hidden="true"></small>
 						</div>
 						<div class="form-control">
 							<label for="Age">Age <em>(optional)</em></label>

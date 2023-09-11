@@ -48,9 +48,11 @@
 	--light-blue-opq: rgba(217, 217, 252, 0.8);
 	--light-blue: #7f7fdb;
 	--navy-blue: #130e3d;
-	--purple-clr: #42215f;
+	--light-purple: #cda4f1;
+	--lighter-purple: #936cb6;
+	--purple-clr: #532e74;
 	--light-gray: #adadad;
-	--dark-gray: #646363;
+	--dark-gray: #282a32;
 	--dark-clr: #141420;
 	--dark-opq: rgba(16, 16, 53, 0.4);
 	--light-clr: #fefefe;
@@ -60,7 +62,10 @@
 
 body {
 	height: 100vh;
-	background-color: var(--light-clr);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(160deg, var(--light-purple), var(--lighter-purple), var(--purple-clr));
 }
 
 h1,
@@ -85,6 +90,15 @@ i {
 	font-size: 1.4em;
 }
 
+li {
+	list-style-type: none;
+}
+
+a {
+	color: var(--light-clr);
+	text-decoration: none;
+}
+
 button {
 	font-family: "Assistant 700";
 	font-weight: 600;
@@ -103,7 +117,6 @@ button {
 
 .modal-info {
 	position: fixed;
-	z-index: 1;
 	left: 0;
 	top: 0;
 	width: 100vw;
@@ -112,7 +125,7 @@ button {
 	justify-content: center;
 	align-items: center;
 	background-color: var(--dark-opq);
-	transition: opacity 300ms ease-in;
+	transition: opacity 300ms ease-in-out;
 }
 
 .modal-info-content {
@@ -120,7 +133,8 @@ button {
 	color: var(--dark-clr);
 	text-align: center;
 	width: 620px;
-	overflow: hidden;
+	max-width: 100%;
+	overflow: auto;
 }
 
 .modal-info-header {
@@ -220,7 +234,6 @@ button {
 
 .survey-one-modal {
 	position: fixed;
-	z-index: 1;
 	left: 0;
 	top: 0;
 	width: 100vw;
@@ -229,7 +242,7 @@ button {
 	justify-content: center;
 	align-items: center;
 	background-color: var(--dark-opq);
-	transition: opacity 300ms ease-in;
+	transition: opacity 300ms ease-in-out;
 }
 
 .survey-one-container {
@@ -237,8 +250,9 @@ button {
 	color: var(--dark-clr);
 	text-align: center;
 	width: 650px;
+	max-width: 100%;
 	padding-bottom: 25px;
-	overflow: hidden;
+	overflow: auto;
 }
 
 .survey-header {
@@ -247,12 +261,14 @@ button {
 	color: var(--light-clr);
 }
 
-.survey-one-container h1 {
+.survey-one-container h1,
+.survey-two-container h1 {
 	font-size: 1.6rem;
 	margin-block: 10px;
 }
 
-.survey-one-container small {
+.survey-one-container small,
+.survey-two-container small {
 	padding-left: 40px;
 }
 
@@ -271,6 +287,253 @@ button {
 	width: 50%;
 }
 
+/*******************************/
+/** Survey Two Modal Styling **/
+/*****************************/
+
+.survey-two-modal {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--dark-opq);
+	transition: opacity 300ms ease-in-out;
+}
+
+.survey-two-container {
+	background-color: var(--light-clr);
+	color: var(--dark-clr);
+	text-align: center;
+	width: 600px;
+	max-width: 100%;
+	padding-bottom: 25px;
+	overflow: auto;
+}
+
+.survey-two-container input[type="text"] {
+	width: 100%;
+	padding: 8px;
+	padding-left: 20px;
+	color: var(--navy-blue);
+	font-size: 1rem;
+	border: 1px solid var(--purple-clr);
+}
+
+.survey-two-container button {
+	width: 50%;
+	padding: 8px;
+}
+
+/********************************/
+/** Survey Three Modal Styling **/
+/*******************************/
+
+.survey-three-modal {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--dark-opq);
+	transition: opacity 300ms linear;
+}
+
+.survey-three-container {
+	background-color: var(--light-clr);
+	color: var(--dark-clr);
+	text-align: center;
+	width: 600px;
+	max-width: 100%;
+	padding-bottom: 25px;
+	overflow: auto;
+}
+
+.survey-three-container .survey-header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.survey-three-container form {
+	padding: 30px;
+}
+
+.survey-three-container h2 {
+	margin-bottom: 1rem;
+}
+
+.survey-three-container textarea {
+	font-size: 1.1rem;
+	font-family: 'Assistant 400';
+	color:  var(--dark-clr);
+	padding-block: .5rem;
+	padding-inline: 1.1rem;
+	height: 150px;
+	width: 100%;
+}
+
+/********************************/
+/**      Web Page Styling      **/
+/*******************************/
+
+.web-content-container {
+	width: 900px;
+	height: 600px;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-direction: column;
+	background-color: var(--dark-gray);
+	color: var(--light-clr);
+	border-radius: 5px;
+	overflow-x: hidden;
+	position: relative;
+}
+
+.web-content-container .header {
+	width: 100%;
+	min-height: 130px;
+	display: flex;
+	padding-block: 1rem;
+	padding-inline: 2.5rem;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 2px solid var(--light-clr);
+}
+
+.web-content-container .user-logIn {
+	height: 95px;
+	width: 95px;
+	padding: .3rem;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: .3rem;
+	border: 2px solid var(--light-clr);
+	border-radius:  50%;
+	transition: transform 150ms linear;
+}
+
+.user-logIn p {
+	font-size: 1.1rem;
+	font-weight: bold;
+}
+
+.web-content-container .user-logIn:hover {
+	transform: scale(1.02);
+}
+
+.navbar ul {
+	display: flex;
+	align-items: center;
+}
+
+.navbar li {
+	padding: 1rem;
+}
+
+.navbar a {
+	cursor: pointer;
+	font-size: 1.1rem;
+	font-weight: bold;
+}
+
+.navbar a:hover {
+	color: var(--light-purple);
+}
+
+.selected {
+	color: var(--light-purple);
+}
+
+.content-container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.button-right,
+.button-left {
+	z-index: 1;
+	background-color: transparent;
+	border: none;
+	color: var(--light-clr);
+	position: absolute;
+}
+
+.button-left {
+	top: 60%;
+	left: 10px;
+}
+
+.button-right {
+	top: 60%;
+	right: 10px;
+}
+
+.button-right:hover,
+.button-left:hover {
+	color: var(--purple-clr);
+}
+
+.movies-container {
+	height: 100%;
+	padding-inline: 1rem;
+	display: flex;
+	gap: .5rem;
+	align-items: center;
+	transition: transform 350ms linear;
+}
+
+.content-control {
+	height: 300px;
+	width: 200px;
+	text-align: center;
+}
+
+.content-control .placeholder-movie {
+	cursor: pointer;
+	height: 90%;
+	padding: 20px;
+	background: linear-gradient(340deg, var(--light-gray), var(--light-clr));
+	margin-bottom: .5rem;
+}
+
+.placeholder-movie .placeholder-img {
+	background-color: var(--dark-opq);
+	height: 200px;
+	width: 150px;
+}
+
+.content-nav {
+	position: absolute;
+	display: flex;
+	width: 200px;
+	justify-content: space-evenly;
+	top: 90%;	
+	left: 38%;
+}
+
+.content-nav button {
+	border: none;
+	border-radius: 5px;
+	height: 4px;
+	width: 55px;
+}
+
+.content-nav button:hover {
+	background-color: var(--lighter-purple);
+}
+
 /* The switch - the box around the slider */
 .switch {
 	position: relative;
@@ -284,6 +547,22 @@ button {
 	opacity: 0;
 	width: 0;
 	height: 0;
+}
+
+.current-slide {
+	background-color: var(--lighter-purple);
+}
+
+.default-slide {
+	transform: translateX(0%);
+}
+
+.first-slide {
+	transform: translateX(-50%);
+}
+
+.second-slide {
+	transform: translateX(-100%);
 }
 
 /* The slider */
