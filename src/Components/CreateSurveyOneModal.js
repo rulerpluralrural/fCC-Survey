@@ -2,9 +2,10 @@ export default function createSurveyOneModal() {
 	const surveyModal = document.createElement("div");
 	surveyModal.id = "survey-one-modal";
 	surveyModal.className = "survey-one-modal disable";
+    surveyModal.classList.add('overlay')
 
 	surveyModal.innerHTML += `
-        <div class="survey-one-container">
+        <div class="survey-one-container container-style">
             <form  action="" id="modal-survey-form">
                 <div class="survey-header"></div>
 

@@ -26,7 +26,7 @@ export default function createWebPage (){
             <i class="fa-solid fa-chevron-left"></i>
         </button>
 
-            <div class="movies-container default-slide">
+            <div class="movies-container" data-slides='0'>
                 <div class="content-control">
                     <div class="placeholder-movie">
                         <div class="placeholder-img"></div>

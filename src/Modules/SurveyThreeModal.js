@@ -1,3 +1,4 @@
+import { buttonEventListener } from "./App.js";
 
 const loadSurveyThree = () => {
 	const surveyThreeModal = document.querySelector("#survey-three-modal");
@@ -9,6 +10,7 @@ const loadSurveyThree = () => {
 		e.preventDefault();
         console.log('Complete!')
         surveyThreeModal.classList.add("disable");
+		buttonEventListener()
 	});
 };
 

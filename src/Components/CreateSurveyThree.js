@@ -2,9 +2,10 @@ export default function createSurveyThree() {
 	const surveyThreeModal = document.createElement("div");
 	surveyThreeModal.id = "survey-three-modal";
 	surveyThreeModal.className = "survey-three-modal disable";
+    surveyThreeModal.classList.add('overlay')
 
 	surveyThreeModal.innerHTML += `
-        <div class="survey-three-container">
+        <div class="survey-three-container container-style">
             <div class="survey-header">
                 <h1>Thank you for your patience!</h1>
             </div>
